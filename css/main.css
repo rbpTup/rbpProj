@@ -1,0 +1,66 @@
+/*global styles*/
+*{
+    margin: 0; 
+    padding: 0;
+}
+body{
+    font-family: "Lato", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+/*header styles*/
+header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+header *{
+    color: #fff;
+}
+header #main-menu > ul{
+    display: flex
+}
+header #main-menu .has-child ul{
+    display: none
+}
+header #main-menu a{
+    padding: 15px 22px;
+    display: inline-block
+}
+header #main-menu > ul > li > a{
+    text-transform: uppercase;
+}
+header #main-menu > ul > li > a:hover{
+    background: #ccc;
+    color: #000
+}
+
+
+
+
+
+
+
+
+/*slide styles*/
+#slider img{
+    width: 100%
+}
+
