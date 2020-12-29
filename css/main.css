@@ -64,3 +64,9 @@ header #main-menu > ul > li > a:hover{
     width: 100%
 }
 
+
+/*contact styles*/
+#contact{
+height: 100px;
+background-color:gray;
+}
