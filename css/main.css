@@ -6,13 +6,41 @@
 body{
     font-family: "Lato", sans-serif;
 }
+img{
+    max-width: 100%;
+}
 a{
     text-decoration: none;
 }
 ul{
     list-style: none;
 }
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400; text-transform: uppercase;
+}
+h2, .h2{
+    font-size: 30px;
+    margin: 10px 0;
+}
+p, h5, h6, .h5, .h6{
+    font-size: 15px;
+}
 
+/*layout slides*/
+.container{margin: 0 auto;}
+@media( min-width: 768px ){
+    .d-flex{display: flex}
+    .container{
+        max-width: 750px;
+    }
+}
+@media( min-width: 992px ){
+    .container{
+        max-width: 800px;
+    }
+}
 
 
 
@@ -37,8 +65,41 @@ header *{
 header #main-menu > ul{
     display: flex;
 }
+header #main-menu .has-child{
+    position: relative;
+}
+header #main-menu .has-child:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border: 5px solid #fff;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    top: 20px;
+    right: 10px;
+    position: absolute
+}
+header #main-menu .has-child:hover:after{
+    border-top-color: #000;
+}
 header #main-menu .has-child ul{
     display: none;
+    position: absolute;
+    background: #fff;
+    min-width: 130px;
+    box-shadow: 0 0 20px #777;
+}
+header #main-menu .has-child ul li a{
+    color: #000;
+    padding: 8px 16px;
+    font-size: 15px;
+}
+header #main-menu .has-child:hover ul{
+    display: block;
+}
+header #main-menu .has-child:hover ul li:hover{
+    background: #ccc;
 }
 header #main-menu a{
     padding: 15px 22px;
@@ -46,8 +107,9 @@ header #main-menu a{
 }
 header #main-menu > ul > li > a{
     text-transform: uppercase;
+    font-size: 15px;
 }
-header #main-menu > ul > li > a:hover{
+header #main-menu > ul > li:hover > a{
     background: #ccc;
     color: #000;
 }
@@ -60,7 +122,37 @@ header #main-menu > ul > li > a:hover{
 
 
 /*slide styles*/
+#slider{
+    padding-top: 47px
+}
 #slider img{
     width: 100%
 }
 
+
+
+/*band styles*/
+#bandWrapper{
+    text-align: center;
+    padding: 64px 16px;
+}
+#bandWrapper em{
+    font-size: 15px;
+    color: #888;
+    margin: 15px 0;
+}
+#bandWrapper p{
+    text-align: justify;
+    margin: 15px 0;
+}
+#bandWrapper #bandGallery{
+    display: flex;
+    justify-content: space-around;
+    margin: 32px 0;
+}
+#bandWrapper #bandGallery article{
+    max-width: 27%;
+}
+#bandWrapper #bandGallery article h5{
+    margin: 15px 0
+}
