@@ -4,6 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HTML/CSS simple example</title>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
         
         <link rel="stylesheet" href="css/main.css">
     </head>
@@ -27,12 +29,24 @@
                 </ul>
             </nav>
             <form action="">
-                <button>search</button>
+                <button>
+                    <i class="fa fa-search"></i>
+                </button>
             </form>
         </header>
         <section id="slider">
             <!--ahmadi -->
-            <img src="img/chicago.jpg" alt="">
+            <div id="mainSlider" class="owl-carousel">
+                <div>
+                    <img src="img/chicago.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/chicago.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/chicago.jpg" alt="">
+                </div>
+            </div>
         </section>
         <section id="band">
             <!--ahmadi -->
@@ -84,5 +98,17 @@
         <footer>
             <!--ehsani -->
         </footer>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/owlcarousel/owl.carousel.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#mainSlider").owlCarousel({
+                    center: true,
+                    items:1,
+                    loop:true,
+                });
+            });
+        </script>
     </body>
 </html>

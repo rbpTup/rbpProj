@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6,
 h2, .h2{
     font-size: 30px;
     margin: 10px 0;
+    text-align: center;
 }
 p, h5, h6, .h5, .h6{
     font-size: 15px;
@@ -57,10 +58,22 @@ header{
     background: #000;
     display: flex;
     justify-content: space-between;
+    z-index: 10;
 }
 
 header *{
     color: #fff;
+}
+header form button{
+    background: transparent;
+    outline: none;
+    border: none;
+    position: relative;
+    top: 15px; 
+    right: 15px;
+}
+header #main-menu form button i{
+    font-size: 15px;
 }
 header #main-menu > ul{
     display: flex;
@@ -115,12 +128,6 @@ header #main-menu > ul > li:hover > a{
 }
 
 
-
-
-
-
-
-
 /*slide styles*/
 #slider{
     padding-top: 47px
@@ -130,13 +137,6 @@ header #main-menu > ul > li:hover > a{
 }
 
 
-<<<<<<< HEAD
-/*contact styles*/
-#contact{
-height: 100px;
-background-color:gray;
-}
-=======
 
 /*band styles*/
 #bandWrapper{
@@ -147,6 +147,7 @@ background-color:gray;
     font-size: 15px;
     color: #888;
     margin: 15px 0;
+    text-align: center;
 }
 #bandWrapper p{
     text-align: justify;
@@ -163,4 +164,11 @@ background-color:gray;
 #bandWrapper #bandGallery article h5{
     margin: 15px 0
 }
->>>>>>> ahmadi2
+
+
+
+/*contact styles*/
+#contact{
+height: 100px;
+background-color:gray;
+}
